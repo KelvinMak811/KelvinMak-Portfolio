@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelvin Mak | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Work Sans"', 'sans-serif'] },
+                    colors: {
+                        bg: '#F4F4F4',
+                        brand: { yellow: '#ECA72C', red: '#F05033', blue: '#7BDCB5' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <header class="w-full pt-10 pb-6 px-8 md:px-16 flex flex-col md:flex-row justify-between items-center z-50">
+        <a href="index.html" class="text-center md:text-left mb-4 md:mb-0 flex items-baseline gap-2 no-underline text-inherit">
+            <h1 class="text-xl font-bold tracking-tight">Kelvin Mak</h1>
+            <span class="text-xs text-gray-800">IT &amp; Multimedia Educator</span>
+        </a>
+        <nav>
+            <ul class="flex items-center text-sm font-medium space-x-3">
+                <li><a href="resume.html" class="nav-link" id="nav-resume">Resume</a></li>
+                <li class="text-gray-400">|</li>
+                <li><a href="projects.html" class="nav-link" id="nav-projects">Projects</a></li>
+                <li class="text-gray-400">|</li>
+                <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-grow w-full max-w-[1000px] mx-auto px-6 py-10">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-16 mt-10">
+            <div class="w-full md:w-1/2 flex justify-end">
+                <img src="PortfolioIcon2_edited.jpg"
+                     alt="Kelvin Mak"
+                     class="rounded-full w-72 h-72 md:w-[400px] md:h-[400px] object-cover shadow-sm">
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">Kelvin Mak</h2>
+                <h3 class="text-lg font-bold mb-4">A Bit About Me</h3>
+                <p class="text-sm text-gray-800 leading-relaxed mb-4 max-w-md">
+                    I'm an IT and Multimedia Educator and Assistant Lecturer at HKIIT, with an MSc in AI and Digital Media from HKBU. I teach AR/VR development, Python, multimedia post-production, and foundational IT modules—and I'm passionate about using AI, machine learning, and immersive tech in technical education.
+                </p>
+                <p class="text-sm text-gray-800 leading-relaxed mb-10 max-w-md">
+                    Previously I worked as a VR and mobile game developer at Hong Kong Metropolitan University and The University of Hong Kong, including the Smart Traffic Fund VR driving training project and spatial-skills research games in Unity.
+                </p>
+                <div class="flex gap-4">
+                    <a href="resume.html" class="circle-btn bg-brand-yellow no-underline">Resume</a>
+                    <a href="projects.html" class="circle-btn bg-brand-red no-underline">Projects</a>
+                    <a href="contact.html" class="circle-btn bg-brand-blue no-underline">Contact</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full mt-16 pb-10">
+        <div class="max-w-[1000px] mx-auto px-6 border-t border-gray-300 pt-8 flex flex-col md:flex-row justify-center gap-16 md:gap-32 text-center">
+            <div>
+                <p class="font-bold text-sm mb-1">Email</p>
+                <a href="mailto:kelvinmak19980811@gmail.com" class="text-xs text-gray-800 hover:text-brand-yellow transition-colors">kelvinmak19980811@gmail.com</a>
+            </div>
+            <div>
+                <p class="font-bold text-sm mb-1">Phone</p>
+                <p class="text-xs text-gray-800">+852-6182 5827</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/site.js"></script>
+</body>
+</html>
