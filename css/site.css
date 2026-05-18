@@ -276,6 +276,16 @@ a {
     object-fit: cover;
 }
 
+.project-slider-img {
+    cursor: zoom-in;
+}
+
+.browser-shot .project-slider-img {
+    object-fit: contain;
+    object-position: center;
+    background: #111;
+}
+
 .project-media-fallback {
     display: grid;
     place-items: center;
@@ -330,6 +340,56 @@ a {
 .slider-dot.is-active {
     width: 1.3rem;
     background: #fff;
+}
+
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1rem, 3vw, 2rem);
+    background: rgba(12, 10, 8, 0.88);
+    backdrop-filter: blur(16px);
+}
+
+.image-lightbox.is-open {
+    display: flex;
+}
+
+.image-lightbox img {
+    max-width: min(100%, 1400px);
+    max-height: 86vh;
+    object-fit: contain;
+    border-radius: 1rem;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+}
+
+.image-lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--ink);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.image-lightbox-caption {
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    max-width: min(90vw, 900px);
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 0.85rem;
+    text-align: center;
 }
 
 .tab-button {
