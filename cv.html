@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | Kelvin Mak</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Work Sans"', 'sans-serif'] },
+                    colors: {
+                        bg: '#F4F4F4',
+                        brand: { yellow: '#ECA72C', red: '#F05033', blue: '#7BDCB5' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body class="flex flex-col min-h-screen" data-page="cv">
+    <header class="site-header">
+        <div class="site-shell py-5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-inherit">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span>
+                    <span class="block text-lg font-bold tracking-tight">Kelvin Mak</span>
+                    <span class="block text-xs text-gray-700">IT &amp; Multimedia Educator</span>
+                </span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul class="flex flex-wrap items-center justify-center gap-1 text-sm font-semibold">
+                    <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+                    <li><a href="resume.html" class="nav-link" id="nav-resume">Resume</a></li>
+                    <li><a href="projects.html" class="nav-link" id="nav-projects">Projects</a></li>
+                    <li><a href="cv.html" class="nav-link" id="nav-cv">CV</a></li>
+                    <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow site-shell py-12 md:py-16">
+        <section class="card p-6 md:p-10 mb-10">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+                <div>
+                    <p class="eyebrow mb-4">Curriculum vitae</p>
+                    <h1 class="section-title font-bold mb-5">Mak Ka Wai Kelvin</h1>
+                    <p class="lead max-w-3xl">IT and Multimedia Educator with experience across higher-diploma teaching, AR/VR development, Python programming, multimedia post-production, AI and digital media, HCI research, and Unity-based immersive systems.</p>
+                </div>
+                <button type="button" class="btn-secondary self-start lg:self-auto" onclick="window.print()">Print CV</button>
+            </div>
+        </section>
+
+        <section class="grid lg:grid-cols-[0.34fr_0.66fr] gap-8">
+            <aside class="space-y-6">
+                <div class="soft-card p-6">
+                    <h2 class="text-lg font-bold mb-4">Contact</h2>
+                    <div class="space-y-4 text-sm text-gray-700">
+                        <p><span class="block font-bold text-black">Phone</span>+852 6182 5827</p>
+                        <p><span class="block font-bold text-black">Email</span><a href="mailto:kelvinmak19980811@gmail.com" class="footer-link break-all">kelvinmak19980811@gmail.com</a></p>
+                        <p><span class="block font-bold text-black">Portfolio</span><a href="https://kelvinmak811.github.io/KelvinMak-Portfolio/" class="footer-link break-all" target="_blank" rel="noopener noreferrer">kelvinmak811.github.io/KelvinMak-Portfolio/</a></p>
+                        <p><span class="block font-bold text-black">Location</span>Hong Kong</p>
+                    </div>
+                </div>
+
+                <div class="soft-card p-6">
+                    <h2 class="text-lg font-bold mb-4">Technical Skills</h2>
+                    <div class="space-y-4 text-sm text-gray-700">
+                        <p><span class="block font-bold text-black">AI &amp; Data Science</span>Machine learning model construction, big data analytics, recommender systems, data visualization</p>
+                        <p><span class="block font-bold text-black">Programming</span>Python, C++, C#, Lua, JavaScript, Java, SQL, HTML</p>
+                        <p><span class="block font-bold text-black">Game Engine &amp; VR</span>Unity, VR/AR, VFX, UI, Particle System, Cinemachine, Nvidia Omniverse, Unreal Engine 5</p>
+                        <p><span class="block font-bold text-black">Creative Suite</span>Photoshop, After Effects, Illustrator, Premiere Pro, Audition</p>
+                        <p><span class="block font-bold text-black">3D Modeling &amp; Sandbox</span>Vox Edit, Game Maker</p>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="card p-6 md:p-8">
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold tracking-[-0.03em] mb-5">Employment History</h2>
+                    <article class="timeline-item">
+                        <div class="timeline-date">Apr 2024 - Present</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">Assistant Lecturer</h3>
+                            <p class="text-sm text-gray-600 mb-4">Hong Kong Institute of Information Technology (HKIIT) / IVE</p>
+                            <ul class="list-disc pl-5 text-sm text-gray-700 leading-relaxed space-y-2">
+                                <li>Deliver comprehensive instruction for Higher Diploma modules, specializing in advanced programming and immersive media.</li>
+                                <li>Teach MET4913 AR/VR Studies with Unity 3D, interactive environments, scripting, and deployment.</li>
+                                <li>Teach MET4113 VR Post-Production using Adobe After Effects and advanced visual effects workflows.</li>
+                                <li>Guide ITP3915 Programming Fundamental students through Python, software logic, data structures, and algorithms.</li>
+                                <li>Teach foundational modules including Information Technology Essential (Smart Living &amp; Service) and IT Applications.</li>
+                                <li>Supervise student internship and competition work, including China Mobile X Po Leung Kuk C. W. Chu College X HKIIT IT Lab 2025 and Hong Kong Disney Imagination Competition 2025.</li>
+                                <li>Helped host the Metaverse Centre opening in June 2025.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-date">May 2023 - Mar 2024</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">Research Assistant II (VR Game Developer)</h3>
+                            <p class="text-sm text-gray-600 mb-4">Hong Kong Metropolitan University</p>
+                            <ul class="list-disc pl-5 text-sm text-gray-700 leading-relaxed space-y-2">
+                                <li>Project Manager for the Virtual Reality-based Driving Training System Project funded by the Smart Traffic Fund.</li>
+                                <li>Engineered VR eye-tracking and hand-tracking systems to enhance immersion and data collection.</li>
+                                <li>Developed a virtual driving training system for a specialized VR simulator.</li>
+                                <li>Organized and ran demonstrations at Lee Kin Driving School and HKUST.</li>
+                                <li>Conducted advanced HCI research and data visualization work.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-date">Nov 2021 - Apr 2023</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">Research Assistant II (3D Game &amp; Mobile Game Developer)</h3>
+                            <p class="text-sm text-gray-600 mb-4">The University of Hong Kong</p>
+                            <ul class="list-disc pl-5 text-sm text-gray-700 leading-relaxed space-y-2">
+                                <li>Created five interactive Unity mini mobile games, overseeing UI/UX, storytelling, and core game design.</li>
+                                <li>Developed secure login and database systems to manage game data and support user-information research.</li>
+                                <li>Managed and mentored 15 HKU student interns through task assignment, progress monitoring, and constructive feedback.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold tracking-[-0.03em] mb-5">Education</h2>
+                    <article class="timeline-item">
+                        <div class="timeline-date">Sep 2025 - Jun 2026</div>
+                        <div>
+                            <h3 class="text-lg font-bold">MSc in AI and Digital Media</h3>
+                            <p class="text-sm text-gray-600 mb-2">Hong Kong Baptist University (HKBU)</p>
+                            <p class="text-sm text-gray-700 leading-relaxed">Postgraduate study focused on artificial intelligence, data science, modern media, machine learning models, recommender systems, big data management, and data visualization.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item">
+                        <div class="timeline-date">Sep 2019 - Aug 2021</div>
+                        <div>
+                            <h3 class="text-lg font-bold">BA (Hons) in Computing and Interactive Entertainment</h3>
+                            <p class="text-sm text-gray-600 mb-2">Hong Kong Metropolitan University</p>
+                            <p class="text-sm text-gray-700 leading-relaxed">Graduated with Second Upper Honor. Studied software engineering, Java programming, mobile application design, HCI/UX, game programming, animation, sound design, and visual effects.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item">
+                        <div class="timeline-date">Sep 2017 - Aug 2019</div>
+                        <div>
+                            <h3 class="text-lg font-bold">Higher Diploma in Multimedia</h3>
+                            <p class="text-sm text-gray-600">Hong Kong Institute of Vocational Education (Sha Tin)</p>
+                        </div>
+                    </article>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold tracking-[-0.03em] mb-5">Certifications</h2>
+                    <article class="timeline-item">
+                        <div class="timeline-date">May 2026</div>
+                        <div>
+                            <h3 class="text-lg font-bold">Unreal Engine Instructor</h3>
+                            <p class="text-sm text-gray-600 mb-2">Silver Medal</p>
+                            <p class="text-sm text-gray-700 leading-relaxed">Completed Unreal Engine instructor training and assessment; awarded Silver Medal for overall performance in the programme.</p>
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full mt-12 pb-10">
+        <div class="site-shell border-t border-gray-300 pt-8 flex flex-col md:flex-row justify-between gap-6 text-sm text-gray-700">
+            <p><span class="font-bold text-black">Email:</span> <a href="mailto:kelvinmak19980811@gmail.com" class="footer-link">kelvinmak19980811@gmail.com</a></p>
+            <p><span class="font-bold text-black">Phone:</span> +852-6182 5827</p>
+        </div>
+    </footer>
+
+    <script src="js/site.js"></script>
+</body>
+</html>

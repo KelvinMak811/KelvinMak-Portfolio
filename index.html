@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelvin Mak | Portfolio</title>
+    <title>Kelvin Mak | IT & Multimedia Educator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['"Work Sans"', 'sans-serif'] },
+                    fontFamily: { sans: ['\"Work Sans\"', 'sans-serif'] },
                     colors: {
                         bg: '#F4F4F4',
                         brand: { yellow: '#ECA72C', red: '#F05033', blue: '#7BDCB5' }
@@ -23,59 +23,127 @@
     </script>
     <link rel="stylesheet" href="css/site.css">
 </head>
-<body class="flex flex-col min-h-screen">
-
-    <header class="w-full pt-10 pb-6 px-8 md:px-16 flex flex-col md:flex-row justify-between items-center z-50">
-        <a href="index.html" class="text-center md:text-left mb-4 md:mb-0 flex items-baseline gap-2 no-underline text-inherit">
-            <h1 class="text-xl font-bold tracking-tight">Kelvin Mak</h1>
-            <span class="text-xs text-gray-800">IT &amp; Multimedia Educator</span>
-        </a>
-        <nav>
-            <ul class="flex items-center text-sm font-medium space-x-3">
-                <li><a href="resume.html" class="nav-link" id="nav-resume">Resume</a></li>
-                <li class="text-gray-400">|</li>
-                <li><a href="projects.html" class="nav-link" id="nav-projects">Projects</a></li>
-                <li class="text-gray-400">|</li>
-                <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
-            </ul>
-        </nav>
+<body class="flex flex-col min-h-screen" data-page="home">
+    <header class="site-header">
+        <div class="site-shell py-5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-inherit">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span>
+                    <span class="block text-lg font-bold tracking-tight">Kelvin Mak</span>
+                    <span class="block text-xs text-gray-700">IT &amp; Multimedia Educator</span>
+                </span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul class="flex flex-wrap items-center justify-center gap-1 text-sm font-semibold">
+                    <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+                    <li><a href="resume.html" class="nav-link" id="nav-resume">Resume</a></li>
+                    <li><a href="projects.html" class="nav-link" id="nav-projects">Projects</a></li>
+                    <li><a href="cv.html" class="nav-link" id="nav-cv">CV</a></li>
+                    <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="flex-grow w-full max-w-[1000px] mx-auto px-6 py-10">
-        <div class="flex flex-col md:flex-row items-center justify-center gap-16 mt-10">
-            <div class="w-full md:w-1/2 flex justify-end">
-                <img src="PortfolioIcon2_edited.jpg"
-                     alt="Kelvin Mak"
-                     class="rounded-full w-72 h-72 md:w-[400px] md:h-[400px] object-cover shadow-sm">
+    <main class="flex-grow">
+        <section class="site-shell py-12 md:py-20">
+            <div class="hero-grid">
+                <div>
+                    <p class="eyebrow mb-5"><span class="brand-mark" aria-hidden="true"></span> Teaching, AI media, AR/VR and Unity</p>
+                    <h1 class="display-title font-bold mb-8">I build learning experiences for immersive technology.</h1>
+                    <p class="lead max-w-2xl mb-8">
+                        I am an Assistant Lecturer at HKIIT and an IT and Multimedia Educator with hands-on experience in AR/VR development, Python programming, AI and digital media, Unity game systems, and research-driven interactive projects.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-10" aria-label="Core expertise">
+                        <span class="tag">AR/VR curriculum</span>
+                        <span class="tag">Unity 3D and C#</span>
+                        <span class="tag">Python teaching</span>
+                        <span class="tag">AI and digital media</span>
+                        <span class="tag">HCI research</span>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="projects.html" class="btn-primary">View project work</a>
+                        <a href="resume.html" class="btn-secondary">Read resume</a>
+                        <a href="cv.html" class="btn-secondary">View CV</a>
+                    </div>
+                </div>
+
+                <aside class="card p-5 md:p-7">
+                    <div class="portrait-frame mx-auto mb-7 w-64 h-64 md:w-80 md:h-80">
+                        <img src="PortfolioIcon2_edited.jpg" alt="Kelvin Mak" class="rounded-full w-full h-full object-cover shadow-sm">
+                    </div>
+                    <div class="grid grid-cols-3 gap-3 mb-6">
+                        <div class="metric"><strong>2024+</strong><span>HKIIT lecturer</span></div>
+                        <div class="metric"><strong>VR</strong><span>driving research</span></div>
+                        <div class="metric"><strong>5</strong><span>Unity mini-games</span></div>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        My work connects classroom delivery with production practice: immersive media modules, VR simulator research, mobile spatial-skills games, and interactive web reports on AI media.
+                    </p>
+                </aside>
             </div>
-            <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
-                <h2 class="text-5xl md:text-6xl font-bold mb-6">Kelvin Mak</h2>
-                <h3 class="text-lg font-bold mb-4">A Bit About Me</h3>
-                <p class="text-sm text-gray-800 leading-relaxed mb-4 max-w-md">
-                    I'm an IT and Multimedia Educator and Assistant Lecturer at HKIIT, with an MSc in AI and Digital Media from HKBU. I teach AR/VR development, Python, multimedia post-production, and foundational IT modules—and I'm passionate about using AI, machine learning, and immersive tech in technical education.
-                </p>
-                <p class="text-sm text-gray-800 leading-relaxed mb-10 max-w-md">
-                    Previously I worked as a VR and mobile game developer at Hong Kong Metropolitan University and The University of Hong Kong, including the Smart Traffic Fund VR driving training project and spatial-skills research games in Unity.
-                </p>
-                <div class="flex gap-4">
-                    <a href="resume.html" class="circle-btn bg-brand-yellow no-underline">Resume</a>
-                    <a href="projects.html" class="circle-btn bg-brand-red no-underline">Projects</a>
-                    <a href="contact.html" class="circle-btn bg-brand-blue no-underline">Contact</a>
+        </section>
+
+        <section class="site-shell py-10 md:py-16">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+                <div>
+                    <p class="eyebrow mb-3">What I bring</p>
+                    <h2 class="section-title font-bold max-w-3xl">A portfolio built around teaching impact and technical making.</h2>
+                </div>
+                <a href="contact.html" class="btn-secondary self-start md:self-auto">Start a conversation</a>
+            </div>
+            <div class="feature-grid">
+                <article class="soft-card accent-card p-6" style="--accent: var(--yellow);">
+                    <p class="text-xs font-bold uppercase tracking-[0.16em] text-gray-500 mb-4">Educator</p>
+                    <h3 class="text-xl font-bold mb-3">Higher-diploma IT and multimedia teaching</h3>
+                    <p class="text-sm text-gray-700 leading-relaxed">I teach AR/VR Studies, VR post-production, Python programming fundamentals, IT essentials, and practical multimedia workflows.</p>
+                </article>
+                <article class="soft-card accent-card p-6" style="--accent: var(--red);">
+                    <p class="text-xs font-bold uppercase tracking-[0.16em] text-gray-500 mb-4">Immersive developer</p>
+                    <h3 class="text-xl font-bold mb-3">Unity, VR, mobile games and simulator systems</h3>
+                    <p class="text-sm text-gray-700 leading-relaxed">I have built VR driving prototypes, hand and eye tracking interactions, mobile Unity games, and research data workflows.</p>
+                </article>
+                <article class="soft-card accent-card p-6" style="--accent: var(--blue);">
+                    <p class="text-xs font-bold uppercase tracking-[0.16em] text-gray-500 mb-4">AI media</p>
+                    <h3 class="text-xl font-bold mb-3">Digital media, data and public-facing storytelling</h3>
+                    <p class="text-sm text-gray-700 leading-relaxed">My MSc work and web projects connect machine learning, data visualization, media literacy, and clear editorial UX.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="site-shell py-10 md:py-16">
+            <div class="card p-6 md:p-9">
+                <div class="flex flex-col lg:flex-row gap-8 lg:items-center">
+                    <div class="lg:w-5/12">
+                        <p class="eyebrow mb-3">Featured proof</p>
+                        <h2 class="text-3xl md:text-5xl font-bold tracking-[-0.05em] leading-none mb-5">Smart Traffic Fund VR Driving School Simulator</h2>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-5">
+                            A funded VR driving training system that combines scenario scripting, cabin interactions, hand tracking, eye tracking, 3D reconstruction, and public demonstrations for industry and academic stakeholders.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="meta-pill">Project Manager</span>
+                            <span class="meta-pill">Unity VR</span>
+                            <span class="meta-pill">HCI and analytics</span>
+                        </div>
+                        <a href="projects.html" class="btn-primary">Explore case studies</a>
+                    </div>
+                    <div class="lg:w-7/12 project-slider" data-slider-images='["Smart Traffic Fund_01.jpg","Smart Traffic Fund_02.jpg","Smart Traffic Fund_03.jpg","Smart Traffic Fund_04.jpg"]' data-slider-alt="Smart Traffic Fund VR Driving School Simulator">
+                        <div class="project-slider-viewport">
+                            <img class="project-slider-img" src="Smart Traffic Fund_01.jpg" alt="Smart Traffic Fund VR Driving School Simulator">
+                        </div>
+                        <button type="button" class="slider-arrow slider-prev" aria-label="Previous image">&lsaquo;</button>
+                        <button type="button" class="slider-arrow slider-next" aria-label="Next image">&rsaquo;</button>
+                        <div class="slider-dots"></div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
-    <footer class="w-full mt-16 pb-10">
-        <div class="max-w-[1000px] mx-auto px-6 border-t border-gray-300 pt-8 flex flex-col md:flex-row justify-center gap-16 md:gap-32 text-center">
-            <div>
-                <p class="font-bold text-sm mb-1">Email</p>
-                <a href="mailto:kelvinmak19980811@gmail.com" class="text-xs text-gray-800 hover:text-brand-yellow transition-colors">kelvinmak19980811@gmail.com</a>
-            </div>
-            <div>
-                <p class="font-bold text-sm mb-1">Phone</p>
-                <p class="text-xs text-gray-800">+852-6182 5827</p>
-            </div>
+    <footer class="w-full mt-12 pb-10">
+        <div class="site-shell border-t border-gray-300 pt-8 flex flex-col md:flex-row justify-between gap-6 text-sm text-gray-700">
+            <p><span class="font-bold text-black">Email:</span> <a href="mailto:kelvinmak19980811@gmail.com" class="footer-link">kelvinmak19980811@gmail.com</a></p>
+            <p><span class="font-bold text-black">Phone:</span> +852-6182 5827</p>
         </div>
     </footer>
 

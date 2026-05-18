@@ -12,7 +12,7 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['"Work Sans"', 'sans-serif'] },
+                    fontFamily: { sans: ['\"Work Sans\"', 'sans-serif'] },
                     colors: {
                         bg: '#F4F4F4',
                         brand: { yellow: '#ECA72C', red: '#F05033', blue: '#7BDCB5' }
@@ -24,206 +24,177 @@
     <link rel="stylesheet" href="css/site.css">
 </head>
 <body class="flex flex-col min-h-screen" data-page="projects">
-
-    <header class="w-full pt-10 pb-6 px-8 md:px-16 flex flex-col md:flex-row justify-between items-center z-50">
-        <a href="index.html" class="text-center md:text-left mb-4 md:mb-0 flex items-baseline gap-2 no-underline text-inherit">
-            <h1 class="text-xl font-bold tracking-tight">Kelvin Mak</h1>
-            <span class="text-xs text-gray-800">IT &amp; Multimedia Educator</span>
-        </a>
-        <nav>
-            <ul class="flex items-center text-sm font-medium space-x-3">
-                <li><a href="resume.html" class="nav-link" id="nav-resume">Resume</a></li>
-                <li class="text-gray-400">|</li>
-                <li><a href="projects.html" class="nav-link" id="nav-projects">Projects</a></li>
-                <li class="text-gray-400">|</li>
-                <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="site-shell py-5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-inherit">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span>
+                    <span class="block text-lg font-bold tracking-tight">Kelvin Mak</span>
+                    <span class="block text-xs text-gray-700">IT &amp; Multimedia Educator</span>
+                </span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul class="flex flex-wrap items-center justify-center gap-1 text-sm font-semibold">
+                    <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+                    <li><a href="resume.html" class="nav-link" id="nav-resume">Resume</a></li>
+                    <li><a href="projects.html" class="nav-link" id="nav-projects">Projects</a></li>
+                    <li><a href="cv.html" class="nav-link" id="nav-cv">CV</a></li>
+                    <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="flex-grow w-full max-w-[1000px] mx-auto px-6 py-10">
-        <h2 class="text-3xl font-bold mb-6">Projects</h2>
-        <p class="text-xs text-gray-600 mb-6 max-w-2xl">Work is grouped by medium: immersive Unity / VR productions, then editorial web projects—including heritage storytelling and interactive long-form reports on synthetic media.</p>
-        <div class="flex flex-wrap gap-1 mb-12 border-b border-gray-200" role="tablist" aria-label="Project categories">
-            <button type="button" role="tab" id="tab-cat-immersive" aria-selected="true" aria-controls="project-cat-immersive" data-project-cat-tab="immersive" class="px-4 py-3 text-sm border-b-2 border-brand-yellow text-black font-semibold -mb-px bg-transparent cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-brand-yellow focus-visible:ring-offset-2 rounded-t">Unity, VR &amp; games</button>
-            <button type="button" role="tab" id="tab-cat-web" aria-selected="false" aria-controls="project-cat-web" data-project-cat-tab="web" class="px-4 py-3 text-sm border-b-2 border-transparent text-gray-600 font-medium -mb-px bg-transparent cursor-pointer hover:text-black outline-none focus-visible:ring-2 focus-visible:ring-brand-yellow focus-visible:ring-offset-2 rounded-t">Web &amp; heritage multimedia</button>
-        </div>
-
-        <div id="project-cat-immersive" role="tabpanel" aria-labelledby="tab-cat-immersive" data-project-cat-panel="immersive" class="space-y-24">
-
-            <div class="flex flex-col md:flex-row gap-12 items-center">
-                <div class="w-full md:w-1/2">
-                    <h3 class="text-lg font-bold mb-4">2022 Apr - 2022 June<br>VR Driving School</h3>
-                    <p class="text-xs text-gray-800 leading-relaxed mb-3">
-                        A Hong Kong–oriented VR driving-school prototype in Unity: a drivable map based on the Ho Man Tin test route, exam-style rules, and lightweight pedestrian and traffic AI so practice feels closer to real constraints. The experience was designed for learner drivers and stakeholders to evaluate training scenarios in head-mounted VR before hardware and tracking were scaled up for the later Smart Traffic Fund programme.
-                    </p>
-                    <p class="text-xs text-gray-800 leading-relaxed mb-3">
-                        Integrated <span class="font-semibold text-gray-900">eye tracking</span> for immersion and for studying where drivers look under test conditions—directly related to the HCI and data-visualisation thread I continued as Research Assistant II (VR) at Hong Kong Metropolitan University.
-                    </p>
-                    <p class="text-xs text-gray-800 leading-relaxed">
-                        <span class="font-semibold text-gray-900">Focus:</span> Unity 3D VR, scenario scripting, traffic logic, and gaze-based interaction design.
-                    </p>
+    <main class="flex-grow site-shell py-12 md:py-16">
+        <section class="mb-12 md:mb-16">
+            <p class="eyebrow mb-4">Selected work</p>
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+                <div>
+                    <h1 class="section-title font-bold mb-5">Projects as teaching proof, research systems and media experiences.</h1>
+                    <p class="lead max-w-3xl">These case studies show the same pattern from different angles: turning technical ideas into usable learning, research, and storytelling experiences.</p>
                 </div>
-                <div class="w-full md:w-1/2 project-slider shadow-sm"
-                     data-slider-images='["VRDrivingSchool_01.jpg","VRDrivingSchool_02.jpg","VRDrivingSchool_03.jpg","VRDrivingSchool_04.jpg","VRDrivingSchool_05.jpg"]'
-                     data-slider-alt="VR Driving School">
-                    <div class="project-slider-viewport">
-                        <img class="project-slider-img" src="VRDrivingSchool_01.jpg" alt="VR Driving School">
-                    </div>
-                    <button type="button" class="slider-arrow left-2 slider-prev" aria-label="Previous image">&lsaquo;</button>
-                    <button type="button" class="slider-arrow right-2 slider-next" aria-label="Next image">&rsaquo;</button>
-                    <div class="slider-dots"></div>
+                <div class="flex flex-wrap gap-2" role="tablist" aria-label="Project categories">
+                    <button type="button" role="tab" id="tab-cat-immersive" aria-selected="true" aria-controls="project-cat-immersive" data-project-cat-tab="immersive" class="tab-button nav-link font-bold">Unity, VR &amp; games</button>
+                    <button type="button" role="tab" id="tab-cat-web" aria-selected="false" aria-controls="project-cat-web" data-project-cat-tab="web" class="tab-button nav-link font-bold">Web &amp; heritage media</button>
                 </div>
             </div>
+        </section>
 
-            <div class="flex flex-col md:flex-row gap-12 items-center">
-                <div class="w-full md:w-1/2">
-                    <h3 class="text-lg font-bold mb-4">2022 Nov - 2023 Nov<br>Spatial Project</h3>
-                    <p class="text-xs text-gray-800 leading-relaxed mb-3">
-                        A research-oriented Unity mobile suite of <span class="font-semibold text-gray-900">five mini-games</span> used to measure and train spatial ability. Each title targets different cognitive and motor patterns; together they support experiments on reaction time, accuracy, and learning curves across sessions.
-                    </p>
-                    <p class="text-xs text-gray-800 leading-relaxed mb-3">
-                        As <span class="font-semibold text-gray-900">lead developer</span>, I owned end-to-end delivery: C# gameplay and UI/UX, narrative and level design, art direction for scenes, and a <span class="font-semibold text-gray-900">backend database</span> for secure login, session logging, and research datasets—parallel to the “login and database systems for game data and user research” work described in my Research Assistant II role at The University of Hong Kong.
-                    </p>
-                    <p class="text-xs text-gray-800 leading-relaxed">
-                        <span class="font-semibold text-gray-900">Focus:</span> Unity UI/UX, experimental game design, data-backed HCI research, and full-stack integration between clients and storage.
-                    </p>
-                </div>
-                <div class="w-full md:w-1/2 project-slider shadow-sm"
-                     data-slider-images='["SpatialProject_01.jpg","SpatialProject_02.jpg","SpatialProject_03.jpg","SpatialProject_04.jpg","SpatialProject_05.jpg","SpatialProject_06.jpg","SpatialProject_07.jpg"]'
-                     data-slider-alt="Spatial Project">
-                    <div class="project-slider-viewport">
-                        <img class="project-slider-img" src="SpatialProject_01.jpg" alt="Spatial Project">
+        <section id="project-cat-immersive" role="tabpanel" aria-labelledby="tab-cat-immersive" data-project-cat-panel="immersive" class="space-y-8">
+            <article class="card project-card">
+                <div class="project-copy">
+                    <p class="eyebrow mb-3">2023 Apr - 2024 Apr</p>
+                    <h2 class="text-3xl font-bold tracking-[-0.04em] mb-4">Smart Traffic Fund VR Driving School Simulator</h2>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-4">A funded VR driving training system that evolved earlier driving-school prototypes into a simulator with believable cabin interactions, hand tracking, eye tracking, analytics, and realistic Hong Kong context through 3D reconstruction and Gaussian splat workflows.</p>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-5">I served as Project Manager, organised demonstrations at Lee Kin Driving School and HKUST, and connected technical build decisions with stakeholder testing and HCI research needs.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="meta-pill">Role: Project Manager</span>
+                        <span class="meta-pill">Unity VR</span>
+                        <span class="meta-pill">Hand and eye tracking</span>
+                        <span class="meta-pill">HCI analytics</span>
                     </div>
-                    <button type="button" class="slider-arrow left-2 slider-prev" aria-label="Previous image">&lsaquo;</button>
-                    <button type="button" class="slider-arrow right-2 slider-next" aria-label="Next image">&rsaquo;</button>
+                </div>
+                <div class="project-slider" data-slider-images='["Smart Traffic Fund_01.jpg","Smart Traffic Fund_02.jpg","Smart Traffic Fund_03.jpg","Smart Traffic Fund_04.jpg"]' data-slider-alt="Smart Traffic Fund VR Driving School Simulator">
+                    <div class="project-slider-viewport"><img class="project-slider-img" src="Smart Traffic Fund_01.jpg" alt="Smart Traffic Fund VR Driving School Simulator"></div>
+                    <button type="button" class="slider-arrow slider-prev" aria-label="Previous image">&lsaquo;</button>
+                    <button type="button" class="slider-arrow slider-next" aria-label="Next image">&rsaquo;</button>
                     <div class="slider-dots"></div>
                 </div>
-            </div>
+            </article>
 
-            <div class="flex flex-col md:flex-row gap-12 items-center">
-                <div class="w-full md:w-1/2">
-                    <h3 class="text-lg font-bold mb-4">2023 Apr - 2024 Apr<br>Smart Traffic Fund - VR Driving School Simulator</h3>
-                    <p class="text-xs text-gray-800 leading-relaxed mb-3">
-                        The funded evolution of the VR Driving School line: I served as <span class="font-semibold text-gray-900">Project Manager</span> for the Smart Traffic Fund’s “Virtual Reality-based Driving Training System,” extending earlier eye-tracking work with a full <span class="font-semibold text-gray-900">hand-tracking</span> stack so trainees can operate the cabin believably—hand brake, gear lever, hazards, indicators, start button, and related interior controls—while analytics still support HCI and performance review.
-                    </p>
-                    <p class="text-xs text-gray-800 leading-relaxed mb-3">
-                        Outdoor Hong Kong context is delivered through a <span class="font-semibold text-gray-900">3D reconstruction / Gaussian splat</span> pipeline for street-level realism, complementing my skills in point-cloud capture (e.g. LiDAR) and processing in tools such as Reality Capture for believable environment authoring.
-                    </p>
-                    <p class="text-xs text-gray-800 leading-relaxed">
-                        <span class="font-semibold text-gray-900">Outreach:</span> I organised and ran multiple public and partner demonstrations—including showcases at Lee Kin Driving School and HKUST—so industry and academia could trial the simulator and give structured feedback.
-                    </p>
-                </div>
-                <div class="w-full md:w-1/2 project-slider shadow-sm"
-                     data-slider-images='["Smart Traffic Fund_01.jpg","Smart Traffic Fund_02.jpg","Smart Traffic Fund_03.jpg","Smart Traffic Fund_04.jpg"]'
-                     data-slider-alt="Smart Traffic Fund VR Driving School Simulator">
-                    <div class="project-slider-viewport">
-                        <img class="project-slider-img" src="Smart Traffic Fund_01.jpg" alt="Smart Traffic Fund VR Driving School Simulator">
+            <article class="card project-card">
+                <div class="project-copy">
+                    <p class="eyebrow mb-3">2022 Nov - 2023 Nov</p>
+                    <h2 class="text-3xl font-bold tracking-[-0.04em] mb-4">Spatial Project</h2>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-4">A research-oriented Unity mobile suite of five mini-games used to measure and train spatial ability through reaction time, accuracy, and learning-curve data.</p>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-5">As lead developer, I owned gameplay and UI/UX, narrative and level design, art direction, secure login, database systems, and research data capture.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="meta-pill">Role: Lead Developer</span>
+                        <span class="meta-pill">Unity mobile</span>
+                        <span class="meta-pill">Research database</span>
+                        <span class="meta-pill">UI/UX</span>
                     </div>
-                    <button type="button" class="slider-arrow left-2 slider-prev" aria-label="Previous image">&lsaquo;</button>
-                    <button type="button" class="slider-arrow right-2 slider-next" aria-label="Next image">&rsaquo;</button>
+                </div>
+                <div class="project-slider" data-slider-images='["SpatialProject_01.jpg","SpatialProject_02.jpg","SpatialProject_03.jpg","SpatialProject_04.jpg","SpatialProject_05.jpg","SpatialProject_06.jpg","SpatialProject_07.jpg"]' data-slider-alt="Spatial Project">
+                    <div class="project-slider-viewport"><img class="project-slider-img" src="SpatialProject_01.jpg" alt="Spatial Project"></div>
+                    <button type="button" class="slider-arrow slider-prev" aria-label="Previous image">&lsaquo;</button>
+                    <button type="button" class="slider-arrow slider-next" aria-label="Next image">&rsaquo;</button>
                     <div class="slider-dots"></div>
                 </div>
-            </div>
+            </article>
 
-            <div class="flex flex-col md:flex-row gap-12 items-center">
-                <div class="w-full md:w-1/2">
-                    <h3 class="text-lg font-bold mb-4">2023 May - 2023 July<br>3D TPS Mobile Game (Whoii World)</h3>
-                    <p class="text-xs text-gray-800 leading-relaxed mb-3">
-                        A Unity-based <span class="font-semibold text-gray-900">third-person 3D mobile</span> title built around hide-and-seek and light combat across varied environments. The goal was a polished handheld experience with readable UI, stable frame rates on mid-tier phones, and strong scene readability for multiplayer-style cat-and-mouse play.
-                    </p>
-                    <p class="text-xs text-gray-800 leading-relaxed mb-3">
-                        I contributed across the production stack: <span class="font-semibold text-gray-900">UI/UX</span> flows and HUD, <span class="font-semibold text-gray-900">scene optimisation</span> and occlusion-friendly layouts, core <span class="font-semibold text-gray-900">C# gameplay</span> for the hide-and-seek loop, <span class="font-semibold text-gray-900">post-processing</span> and lighting passes, narrative beats, and <span class="font-semibold text-gray-900">Cinemachine-driven cinematics</span> for NPC cutscenes—matching the kind of end-to-end Unity 3D work highlighted in my HKU mobile-game research period.
-                    </p>
-                    <p class="text-xs text-gray-800 leading-relaxed">
-                        <span class="font-semibold text-gray-900">Focus:</span> Mobile Unity pipelines, VFX/UI balance, systems design, and scripted sequences for player onboarding and story moments.
-                    </p>
-                </div>
-                <div class="w-full md:w-1/2 project-slider shadow-sm"
-                     data-slider-images='["WhoiiWorld_01.jpg","WhoiiWorld_02.jpg","WhoiiWorld_03.png","WhoiiWorld_04.png"]'
-                     data-slider-alt="3D TPS Mobile Game (Whoii World)">
-                    <div class="project-slider-viewport">
-                        <img class="project-slider-img" src="WhoiiWorld_01.jpg" alt="3D TPS Mobile Game">
+            <article class="card project-card">
+                <div class="project-copy">
+                    <p class="eyebrow mb-3">2022 Apr - 2022 Jun</p>
+                    <h2 class="text-3xl font-bold tracking-[-0.04em] mb-4">VR Driving School</h2>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-4">A Hong Kong-oriented VR driving-school prototype in Unity, featuring a drivable Ho Man Tin test-route map, exam-style rules, pedestrian and traffic AI, and eye tracking for immersion and gaze analysis.</p>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-5">The prototype established the interaction and research foundation that later scaled into funded simulator work.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="meta-pill">Unity 3D VR</span>
+                        <span class="meta-pill">Traffic logic</span>
+                        <span class="meta-pill">Scenario scripting</span>
+                        <span class="meta-pill">Gaze interaction</span>
                     </div>
-                    <button type="button" class="slider-arrow left-2 slider-prev" aria-label="Previous image">&lsaquo;</button>
-                    <button type="button" class="slider-arrow right-2 slider-next" aria-label="Next image">&rsaquo;</button>
+                </div>
+                <div class="project-slider" data-slider-images='["VRDrivingSchool_01.jpg","VRDrivingSchool_02.jpg","VRDrivingSchool_03.jpg","VRDrivingSchool_04.jpg","VRDrivingSchool_05.jpg"]' data-slider-alt="VR Driving School">
+                    <div class="project-slider-viewport"><img class="project-slider-img" src="VRDrivingSchool_01.jpg" alt="VR Driving School"></div>
+                    <button type="button" class="slider-arrow slider-prev" aria-label="Previous image">&lsaquo;</button>
+                    <button type="button" class="slider-arrow slider-next" aria-label="Next image">&rsaquo;</button>
                     <div class="slider-dots"></div>
                 </div>
-            </div>
+            </article>
 
-        </div>
-
-        <div id="project-cat-web" role="tabpanel" aria-labelledby="tab-cat-web" data-project-cat-panel="web" class="space-y-24 hidden" hidden>
-            <div class="flex flex-col md:flex-row gap-12 items-center">
-                <div class="w-full md:w-1/2">
-                    <h3 class="text-lg font-bold mb-4">Dec 2025<br>華富邨 · Wah Fu Estate</h3>
-                    <p class="text-xs text-gray-800 leading-relaxed mb-3">
-                        A multi-page, bilingual-friendly web experience (Traditional Chinese, Hong Kong) that introduces <span class="font-semibold text-gray-900">Wah Fu Estate</span>—a landmark public housing community—as a living neighbourhood, not only a building complex. The site mirrors how I approach <span class="font-semibold text-gray-900">multimedia teaching</span>: clear information architecture, strong visual narrative, and interactive elements that invite exploration rather than passive reading.
-                    </p>
-                    <p class="text-xs text-gray-800 leading-relaxed mb-3">
-                        The build follows a classic content site structure: a <span class="font-semibold text-gray-900">landing hero</span> and overview, an interactive <span class="font-semibold text-gray-900">history timeline</span> (1920s–1980s), a <span class="font-semibold text-gray-900">Spot</span> section with a <span class="font-semibold text-gray-900">Leaflet.js</span> map plus practical visitor information, long-form <span class="font-semibold text-gray-900">Story</span> pages on people and places, and a <span class="font-semibold text-gray-900">Future</span> area with before/after treatments and redevelopment context. Shared CSS and JavaScript tie the sections together for consistent UX and light interactivity (carousels, map, timeline behaviour).
-                    </p>
-                    <p class="text-xs text-gray-800 leading-relaxed mb-3">
-                        Stack: semantic HTML, modular stylesheets, client-side scripting, and optional <span class="font-semibold text-gray-900">Node/Express</span> hosting for delivery—overlapping with foundational web topics and digital publishing skills relevant to higher-diploma IT and multimedia pathways.
-                    </p>
-                    <p class="text-xs text-gray-800 leading-relaxed">
-                        <span class="font-semibold text-gray-900">Focus:</span> Community heritage, editorial UX, interactive maps, timelines, and responsive layout for cultural storytelling on the open web.
-                    </p>
-                </div>
-                <div class="w-full md:w-1/2 project-slider shadow-sm"
-                     data-slider-images='["WahFuEstate-hero.png","WahFuEstate-housing.png"]'
-                     data-slider-alt="Wah Fu Estate website">
-                    <div class="project-slider-viewport">
-                        <img class="project-slider-img" src="WahFuEstate-hero.png" alt="Wah Fu Estate website hero">
+            <article class="card project-card">
+                <div class="project-copy">
+                    <p class="eyebrow mb-3">2023 May - 2023 Jul</p>
+                    <h2 class="text-3xl font-bold tracking-[-0.04em] mb-4">3D TPS Mobile Game: Whoii World</h2>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-4">A third-person Unity mobile title built around hide-and-seek and light combat, with readable mobile UI, optimized scenes, post-processing, lighting passes, and cinematic NPC story moments.</p>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-5">The project highlights end-to-end mobile game production across gameplay systems, UI/UX, VFX, story, and onboarding.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="meta-pill">Unity mobile</span>
+                        <span class="meta-pill">C# gameplay</span>
+                        <span class="meta-pill">Cinemachine</span>
+                        <span class="meta-pill">Scene optimization</span>
                     </div>
-                    <button type="button" class="slider-arrow left-2 slider-prev" aria-label="Previous image">&lsaquo;</button>
-                    <button type="button" class="slider-arrow right-2 slider-next" aria-label="Next image">&rsaquo;</button>
+                </div>
+                <div class="project-slider" data-slider-images='["WhoiiWorld_01.jpg","WhoiiWorld_02.jpg","WhoiiWorld_03.png","WhoiiWorld_04.png"]' data-slider-alt="3D TPS Mobile Game Whoii World">
+                    <div class="project-slider-viewport"><img class="project-slider-img" src="WhoiiWorld_01.jpg" alt="3D TPS Mobile Game Whoii World"></div>
+                    <button type="button" class="slider-arrow slider-prev" aria-label="Previous image">&lsaquo;</button>
+                    <button type="button" class="slider-arrow slider-next" aria-label="Next image">&rsaquo;</button>
                     <div class="slider-dots"></div>
                 </div>
-            </div>
+            </article>
+        </section>
 
-            <div class="flex flex-col md:flex-row gap-12 items-center">
-                <div class="w-full md:w-1/2">
-                    <h3 class="text-lg font-bold mb-4">Apr 2025<br>The Architecture of Illusion</h3>
-                    <p class="text-sm text-gray-600 mb-4">Interactive web report on synthetic media</p>
-                    <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">Role:</span> UX Engineer · Frontend Developer · Content Designer</p>
-                    <p class="text-xs text-gray-800 leading-relaxed mb-3">
-                        A multi-chapter, dark-themed <span class="font-semibold text-gray-900">interactive web documentary</span> that unpacks how AI deepfakes and voice cloning work, where they help or harm society, and how audiences can reason about synthetic media. The experience is structured as a guided editorial journey—hero video, manifesto, key statistics with citations, and clearly signposted sections on <span class="font-semibold text-gray-900">history, mechanics, benefits, threats, myths, prevention,</span> and <span class="font-semibold text-gray-900">references</span>—so complex material reads like a premium long-form report rather than a static PDF.
-                    </p>
-                    <p class="text-xs text-gray-800 leading-relaxed mb-3">
-                        I led <span class="font-semibold text-gray-900">UX, front-end implementation, and content design</span>: information hierarchy, motion and contrast for readability, and turning machine-learning ideas (e.g. <span class="font-semibold text-gray-900">GANs, autoencoders, zero-shot voice cloning</span>) into layered explanations, custom <span class="font-semibold text-gray-900">SVG schematics</span>, and a <span class="font-semibold text-gray-900">Chart.js</span> visualisation for quantitative storytelling. The interface leans on <span class="font-semibold text-gray-900">HTML5</span>, <span class="font-semibold text-gray-900">CSS Grid</span>, <span class="font-semibold text-gray-900">custom properties</span>, <span class="font-semibold text-gray-900">fluid typography (clamp())</span>, glass-style surfaces, and gradient systems for a cohesive immersive feel without a framework.
-                    </p>
-                    <p class="text-xs text-gray-800 leading-relaxed mb-3">
-                        <span class="font-semibold text-gray-900">Interaction layer:</span> bespoke <span class="font-semibold text-gray-900">vanilla JavaScript</span> components—steppers, accordions, and tabbed panels—to pace disclosure and keep readers oriented inside long pages. The work sits alongside my <span class="font-semibold text-gray-900">AI &amp; digital media</span> background: rigorous citing, plain-language framing, and design choices that support media literacy rather than hype.
-                    </p>
-                    <p class="text-xs text-gray-800 leading-relaxed">
-                        <span class="font-semibold text-gray-900">Stack:</span> HTML5, advanced CSS3 (Grid, variables, fluid type, gradients, glassmorphism), Vanilla JS, Chart.js · <span class="font-semibold text-gray-900">Focus:</span> Editorial UX, data storytelling, and accessible explanations of generative AI on the open web.
-                    </p>
-                </div>
-                <div class="w-full md:w-1/2 project-slider shadow-sm"
-                     data-slider-images='["architecture-of-illusion-1.svg","architecture-of-illusion-2.svg"]'
-                     data-slider-alt="The Architecture of Illusion web report">
-                    <div class="project-slider-viewport">
-                        <img class="project-slider-img" src="architecture-of-illusion-1.svg" alt="The Architecture of Illusion">
+        <section id="project-cat-web" role="tabpanel" aria-labelledby="tab-cat-web" data-project-cat-panel="web" class="space-y-8 hidden" hidden>
+            <article class="card project-card">
+                <div class="project-copy">
+                    <p class="eyebrow mb-3">Dec 2025</p>
+                    <h2 class="text-3xl font-bold tracking-[-0.04em] mb-4">Wah Fu Estate: Heritage Web Experience</h2>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-4">A bilingual-friendly editorial web experience about Wah Fu Estate, combining neighbourhood history, interactive timelines, Leaflet.js mapping, long-form stories, and redevelopment context.</p>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-5">The project reflects my multimedia teaching approach: clear information architecture, visual narrative, and interaction that helps audiences explore cultural material actively.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="meta-pill">Editorial UX</span>
+                        <span class="meta-pill">Leaflet.js</span>
+                        <span class="meta-pill">Timeline design</span>
+                        <span class="meta-pill">Heritage storytelling</span>
                     </div>
-                    <button type="button" class="slider-arrow left-2 slider-prev" aria-label="Previous image">&lsaquo;</button>
-                    <button type="button" class="slider-arrow right-2 slider-next" aria-label="Next image">&rsaquo;</button>
+                </div>
+                <div class="project-slider" data-slider-images='["WahFuEstate-hero.png","WahFuEstate-housing.png"]' data-slider-alt="Wah Fu Estate website">
+                    <div class="project-slider-viewport"><img class="project-slider-img" src="WahFuEstate-hero.png" alt="Wah Fu Estate website hero"></div>
+                    <button type="button" class="slider-arrow slider-prev" aria-label="Previous image">&lsaquo;</button>
+                    <button type="button" class="slider-arrow slider-next" aria-label="Next image">&rsaquo;</button>
                     <div class="slider-dots"></div>
                 </div>
-            </div>
-        </div>
+            </article>
+
+            <article class="card project-card">
+                <div class="project-copy">
+                    <p class="eyebrow mb-3">Apr 2025</p>
+                    <h2 class="text-3xl font-bold tracking-[-0.04em] mb-4">The Architecture of Illusion</h2>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-4">A dark-themed interactive web documentary explaining AI deepfakes, voice cloning, synthetic media risks, benefits, myths, and prevention through a guided editorial journey.</p>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-5">I led UX, front-end implementation, and content design, using custom SVG schematics, Chart.js visualization, vanilla JavaScript components, and plain-language AI media literacy framing.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="meta-pill">UX Engineer</span>
+                        <span class="meta-pill">Vanilla JS</span>
+                        <span class="meta-pill">Chart.js</span>
+                        <span class="meta-pill">AI media literacy</span>
+                    </div>
+                </div>
+                <div class="project-slider" data-slider-images='["architecture-of-illusion-1.svg","architecture-of-illusion-2.svg"]' data-slider-alt="The Architecture of Illusion web report">
+                    <div class="project-slider-viewport"><img class="project-slider-img" src="architecture-of-illusion-1.svg" alt="The Architecture of Illusion web report"></div>
+                    <button type="button" class="slider-arrow slider-prev" aria-label="Previous image">&lsaquo;</button>
+                    <button type="button" class="slider-arrow slider-next" aria-label="Next image">&rsaquo;</button>
+                    <div class="slider-dots"></div>
+                </div>
+            </article>
+        </section>
     </main>
 
-    <footer class="w-full mt-16 pb-10">
-        <div class="max-w-[1000px] mx-auto px-6 border-t border-gray-300 pt-8 flex flex-col md:flex-row justify-center gap-16 md:gap-32 text-center">
-            <div>
-                <p class="font-bold text-sm mb-1">Email</p>
-                <a href="mailto:kelvinmak19980811@gmail.com" class="text-xs text-gray-800 hover:text-brand-yellow transition-colors">kelvinmak19980811@gmail.com</a>
-            </div>
-            <div>
-                <p class="font-bold text-sm mb-1">Phone</p>
-                <p class="text-xs text-gray-800">+852-6182 5827</p>
-            </div>
+    <footer class="w-full mt-12 pb-10">
+        <div class="site-shell border-t border-gray-300 pt-8 flex flex-col md:flex-row justify-between gap-6 text-sm text-gray-700">
+            <p><span class="font-bold text-black">Email:</span> <a href="mailto:kelvinmak19980811@gmail.com" class="footer-link">kelvinmak19980811@gmail.com</a></p>
+            <p><span class="font-bold text-black">Phone:</span> +852-6182 5827</p>
         </div>
     </footer>
 

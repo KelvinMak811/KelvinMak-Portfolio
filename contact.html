@@ -12,7 +12,7 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['"Work Sans"', 'sans-serif'] },
+                    fontFamily: { sans: ['\"Work Sans\"', 'sans-serif'] },
                     colors: {
                         bg: '#F4F4F4',
                         brand: { yellow: '#ECA72C', red: '#F05033', blue: '#7BDCB5' }
@@ -24,89 +24,96 @@
     <link rel="stylesheet" href="css/site.css">
 </head>
 <body class="flex flex-col min-h-screen" data-page="contact">
-
-    <header class="w-full pt-10 pb-6 px-8 md:px-16 flex flex-col md:flex-row justify-between items-center z-50">
-        <a href="index.html" class="text-center md:text-left mb-4 md:mb-0 flex items-baseline gap-2 no-underline text-inherit">
-            <h1 class="text-xl font-bold tracking-tight">Kelvin Mak</h1>
-            <span class="text-xs text-gray-800">IT &amp; Multimedia Educator</span>
-        </a>
-        <nav>
-            <ul class="flex items-center text-sm font-medium space-x-3">
-                <li><a href="resume.html" class="nav-link" id="nav-resume">Resume</a></li>
-                <li class="text-gray-400">|</li>
-                <li><a href="projects.html" class="nav-link" id="nav-projects">Projects</a></li>
-                <li class="text-gray-400">|</li>
-                <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="site-shell py-5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-inherit">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span>
+                    <span class="block text-lg font-bold tracking-tight">Kelvin Mak</span>
+                    <span class="block text-xs text-gray-700">IT &amp; Multimedia Educator</span>
+                </span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul class="flex flex-wrap items-center justify-center gap-1 text-sm font-semibold">
+                    <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+                    <li><a href="resume.html" class="nav-link" id="nav-resume">Resume</a></li>
+                    <li><a href="projects.html" class="nav-link" id="nav-projects">Projects</a></li>
+                    <li><a href="cv.html" class="nav-link" id="nav-cv">CV</a></li>
+                    <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="flex-grow w-full max-w-[1000px] mx-auto px-6 py-10">
-        <div class="flex flex-col md:flex-row gap-16 mt-6">
-            <div class="w-full md:w-1/3">
-                <h2 class="text-3xl font-bold mb-2">Contact</h2>
-                <p class="text-xs text-gray-800 mb-10">Looking forward to hearing from you</p>
-                <div class="mb-6">
-                    <h4 class="text-sm font-bold mb-1">Address</h4>
-                    <p class="text-xs text-gray-800 leading-relaxed">Flat 2520, 25/F, Wah Shing Hse<br>Fung Shing CRT, Fung Shek St 4<br>Sha Tin, N.T., Hong Kong</p>
-                </div>
-                <div class="mb-6">
-                    <h4 class="text-sm font-bold mb-1">Phone</h4>
-                    <p class="text-xs text-gray-800">+852-6182 5827</p>
-                </div>
-                <div>
-                    <h4 class="text-sm font-bold mb-1">Email</h4>
-                    <a href="mailto:kelvinmak19980811@gmail.com" class="text-xs text-gray-800 hover:text-brand-yellow transition-colors">kelvinmak19980811@gmail.com</a>
+    <main class="flex-grow site-shell py-12 md:py-16">
+        <section class="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 lg:gap-12 items-start">
+            <div>
+                <p class="eyebrow mb-4">Contact</p>
+                <h1 class="section-title font-bold mb-6">Let us talk about teaching, immersive media or technical projects.</h1>
+                <p class="lead mb-8">I am open to education, multimedia, AR/VR, AI media, research, and collaboration conversations. Email is the best first contact.</p>
+
+                <div class="space-y-4">
+                    <a href="mailto:kelvinmak19980811@gmail.com" class="soft-card accent-card block p-5 no-underline" style="--accent: var(--yellow);">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-gray-500 mb-2">Email</p>
+                        <p class="font-bold break-all">kelvinmak19980811@gmail.com</p>
+                    </a>
+                    <div class="soft-card accent-card p-5" style="--accent: var(--blue);">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-gray-500 mb-2">Phone</p>
+                        <p class="font-bold">+852-6182 5827</p>
+                    </div>
+                    <div class="soft-card accent-card p-5" style="--accent: var(--red);">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-gray-500 mb-2">Location</p>
+                        <p class="text-sm text-gray-700 leading-relaxed">Sha Tin, New Territories, Hong Kong</p>
+                    </div>
                 </div>
             </div>
-            <div class="w-full md:w-2/3">
-                <form onsubmit="event.preventDefault(); alert('Form submitted successfully!');" class="flex flex-col gap-4">
-                    <div class="flex flex-col md:flex-row gap-4">
-                        <div class="w-full md:w-1/2">
-                            <label class="block text-xs text-gray-800 mb-1">First Name *</label>
-                            <input type="text" required class="form-input" placeholder="First Name">
+
+            <div class="card p-6 md:p-8">
+                <div class="mb-8">
+                    <p class="eyebrow mb-3">Send a message</p>
+                    <h2 class="text-3xl font-bold tracking-[-0.04em] mb-3">What would you like to build or discuss?</h2>
+                    <p class="text-sm text-gray-700 leading-relaxed">This static form gives local feedback in the browser. For a guaranteed reply, please also email me directly.</p>
+                </div>
+                <form data-contact-form class="flex flex-col gap-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="first-name" class="block text-xs font-bold text-gray-700 mb-2">First name *</label>
+                            <input id="first-name" name="first-name" type="text" required class="form-input" placeholder="First name">
                         </div>
-                        <div class="w-full md:w-1/2">
-                            <label class="block text-xs text-gray-800 mb-1">Last Name *</label>
-                            <input type="text" required class="form-input" placeholder="Last Name">
+                        <div>
+                            <label for="last-name" class="block text-xs font-bold text-gray-700 mb-2">Last name *</label>
+                            <input id="last-name" name="last-name" type="text" required class="form-input" placeholder="Last name">
                         </div>
                     </div>
-                    <div class="flex flex-col md:flex-row gap-4">
-                        <div class="w-full md:w-1/2">
-                            <label class="block text-xs text-gray-800 mb-1">Contact Number</label>
-                            <input type="tel" class="form-input" placeholder="Phone Number">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="phone" class="block text-xs font-bold text-gray-700 mb-2">Contact number</label>
+                            <input id="phone" name="phone" type="tel" class="form-input" placeholder="Phone number">
                         </div>
-                        <div class="w-full md:w-1/2">
-                            <label class="block text-xs text-gray-800 mb-1">Email Address *</label>
-                            <input type="email" required class="form-input" placeholder="Email Address">
+                        <div>
+                            <label for="email" class="block text-xs font-bold text-gray-700 mb-2">Email address *</label>
+                            <input id="email" name="email" type="email" required class="form-input" placeholder="Email address">
                         </div>
                     </div>
                     <div>
-                        <label class="block text-xs text-gray-800 mb-1">Title</label>
-                        <input type="text" class="form-input">
+                        <label for="subject" class="block text-xs font-bold text-gray-700 mb-2">Subject</label>
+                        <input id="subject" name="subject" type="text" class="form-input" placeholder="Teaching, AR/VR, AI media, collaboration...">
                     </div>
                     <div>
-                        <label class="block text-xs text-gray-800 mb-1">Content</label>
-                        <textarea rows="4" class="form-input resize-none"></textarea>
+                        <label for="message" class="block text-xs font-bold text-gray-700 mb-2">Message *</label>
+                        <textarea id="message" name="message" rows="6" required class="form-input resize-none" placeholder="Tell me a little about your inquiry."></textarea>
                     </div>
-                    <div class="mt-2">
-                        <button type="submit" class="w-full bg-brand-yellow text-black rounded-full py-3 text-sm font-bold hover:bg-opacity-80 transition">提交</button>
-                    </div>
+                    <p data-form-status class="text-sm text-gray-700" aria-live="polite"></p>
+                    <button type="submit" class="btn-primary w-full">Submit message</button>
                 </form>
             </div>
-        </div>
+        </section>
     </main>
 
-    <footer class="w-full mt-16 pb-10">
-        <div class="max-w-[1000px] mx-auto px-6 border-t border-gray-300 pt-8 flex flex-col md:flex-row justify-center gap-16 md:gap-32 text-center">
-            <div>
-                <p class="font-bold text-sm mb-1">Email</p>
-                <a href="mailto:kelvinmak19980811@gmail.com" class="text-xs text-gray-800 hover:text-brand-yellow transition-colors">kelvinmak19980811@gmail.com</a>
-            </div>
-            <div>
-                <p class="font-bold text-sm mb-1">Phone</p>
-                <p class="text-xs text-gray-800">+852-6182 5827</p>
-            </div>
+    <footer class="w-full mt-12 pb-10">
+        <div class="site-shell border-t border-gray-300 pt-8 flex flex-col md:flex-row justify-between gap-6 text-sm text-gray-700">
+            <p><span class="font-bold text-black">Email:</span> <a href="mailto:kelvinmak19980811@gmail.com" class="footer-link">kelvinmak19980811@gmail.com</a></p>
+            <p><span class="font-bold text-black">Phone:</span> +852-6182 5827</p>
         </div>
     </footer>
 
